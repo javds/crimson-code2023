@@ -8,4 +8,4 @@ hackathon-wsu/.vs/hackathon-wsu/v17/.suo
 *.ipch
 *.filters
 *.user
-gui/build-gui-Desktop_x86_windows_msvc2022_pe_64bit-Debug/*
+gui/build-gui-Desktop_x86_windows_msvc2022_pe_64bit-Debug
