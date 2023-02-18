@@ -36,8 +36,6 @@ public:
 
 
 private:
-	
-
 
 	std::string name;
 
@@ -45,7 +43,6 @@ private:
 	int monthOfBirth;
 	int yearOfBirth;
 	int wsuId;
-
 
 };
 
