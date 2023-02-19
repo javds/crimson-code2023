@@ -14,6 +14,8 @@ public:
 
 	Person* findStudentID(int studentId);
 
+	void loadList(std::ifstream* file);
+
 private:
 
 	std::list<Person*> list;

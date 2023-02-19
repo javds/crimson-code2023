@@ -20,6 +20,7 @@
 #include <chrono>
 #include <list>
 #include <algorithm>
+#include <string>
 #include <stdio.h>
 #pragma comment(lib, "Ws2_32.lib")
 
