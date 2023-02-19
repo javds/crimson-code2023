@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QHBoxLayout>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +19,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void reset_ui();
+
     void on_already_button_clicked();
 
     void on_registration_button_clicked();
