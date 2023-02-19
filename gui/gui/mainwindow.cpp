@@ -1,10 +1,19 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "personnel.hpp"
+#include <regex>
+#include <fstream>
+#include <iostream>
+
+personnelList my_list;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    std::ifstream readFile("data.csv");
+    std::fstream writeFile("data.csv");
+    my_list.loadList(&readFile);
     ui->setupUi(this);
 }
 
@@ -35,7 +44,7 @@ void MainWindow::on_registration_button_clicked()
 
 void MainWindow::on_alr_submit_button_clicked()
 {
-    if (ui->alr_wsu_id_form->text().length() < 8) {
+    if (ui->alr_wsu_id_form->text().length() < 8 || ui->alr_wsu_id_form->text().toStdString().find_first_not_of("0123456789") != std::string::npos) {
         ui->alr_wsu_id_form->setStyleSheet("QLineEdit { background: rgb(157, 34, 53); }");
         ui->alr_wsu_id_form->setPlaceholderText("ID must be 8 digits long.");
         ui->alr_wsu_id_form->clear();
