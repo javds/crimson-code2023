@@ -20,3 +20,9 @@ hackathon-wsu/.vs/hackathon-wsu/v17/.suo
 *.db
 hackathon-wsu/.vs/hackathon-wsu/v17/.suo
 *.db
+*.ilk
+*.obj
+*.tlog
+*.tlog
+*.idb
+hackathon-wsu/hackathon-wsu/x64/Debug/vc143.pdb

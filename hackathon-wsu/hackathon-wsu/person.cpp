@@ -25,27 +25,27 @@ Person::Person(std::string name, int day, int month, int year, int wsuid)
 
 std::string Person::getName()
 {
-	return std::string();
+	return name;
 }
 
 int Person::getDayBirth()
 {
-	return 0;
+	return dayOfBirth;
 }
 
 int Person::getMonthYear()
 {
-	return 0;
+	return monthOfBirth;
 }
 
 int Person::getYearBirth()
 {
-	return 0;
+	return yearOfBirth;
 }
 
 int Person::getWsuId()
 {
-	return 0;
+	return wsuId;
 }
 
 void Person::setName(std::string setName)

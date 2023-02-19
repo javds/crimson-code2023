@@ -18,10 +18,10 @@
 #include <fstream>
 #include <ctime>
 #include <chrono>
+#include <list>
+#include <algorithm>
 #include <stdio.h>
 #pragma comment(lib, "Ws2_32.lib")
 
 
 
-#include "person.hpp"
-#include "networking.hpp"

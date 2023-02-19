@@ -1,20 +1,23 @@
 #pragma once
 #include "bundler.hpp"
+#include "person.hpp"
 
 class personnelList
 {
-private:
-	
 
 public:
-	personnelList(); 
+	personnelList();
 
-	~personnelList(); 
+	~personnelList();
+
+	void pushPerson(Person* source);
+
+	Person* findStudentID(int studentId);
+
+private:
 
 	std::list<Person*> list;
 
-	void pushPerson(Person* source);
-	Person* findStudentID(std::list<Person>& source, int studentID)
 
 };
 

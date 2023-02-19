@@ -15,20 +15,18 @@ void personnelList::pushPerson(Person* source)
 	list.push_back(source);
 }
 
-Person* findStudentID(std::list<Person>& source, int studentID)
+Person* personnelList::findStudentID(int studentID)
 {
-
-	for (std::list<Person>::iterator i = source.begin(); i != source.end(); ++i)
+	for (auto it = list.begin(); it != list.end(); ++it)
 	{
-		/*if (i.getstudentID() == studentID)
+		if ((*it)->getWsuId() == studentID)
 		{
-			std::cout << " Student Found. " << studentID << ":" << std::endl;
-
-			return
-		}*/
+			return (*it);
+		}
 	}
 
-	std::cout << " No student records match the ID. " << findStudentID << std::endl;
+	//std::cout << " No student records match the ID. " << findStudentID << std::endl;
+	return NULL;
 }
 
 
