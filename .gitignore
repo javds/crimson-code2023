@@ -14,3 +14,9 @@ hackathon-wsu/.vs/hackathon-wsu/v17/.suo
 *.db
 hackathon-wsu/.vs/hackathon-wsu/v17/Browse.VC.db
 hackathon-wsu/.vs/hackathon-wsu/v17/.suo
+*.db-wal
+*.opendb
+*.db-shm
+*.db
+hackathon-wsu/.vs/hackathon-wsu/v17/.suo
+*.db
