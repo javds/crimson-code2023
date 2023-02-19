@@ -21,12 +21,21 @@
     <ClCompile Include="person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="personnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bundler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="person.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\personnel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="personnel.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
