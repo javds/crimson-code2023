@@ -21,12 +21,18 @@
     <ClCompile Include="person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="networking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bundler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="person.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="networking.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
