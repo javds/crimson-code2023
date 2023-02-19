@@ -327,6 +327,9 @@ Registration</string>
         <bold>true</bold>
        </font>
       </property>
+      <property name="inputMask">
+       <string/>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -372,7 +375,7 @@ Registration</string>
        </font>
       </property>
       <property name="toolTip">
-       <string>MM/DD/YYYY</string>
+       <string/>
       </property>
       <property name="toolTipDuration">
        <number>-1</number>
@@ -381,7 +384,10 @@ Registration</string>
        <string/>
       </property>
       <property name="maxLength">
-       <number>8</number>
+       <number>10</number>
+      </property>
+      <property name="placeholderText">
+       <string>MM/DD/YYYY</string>
       </property>
      </widget>
      <widget class="QLabel" name="name_label">
@@ -428,7 +434,7 @@ Registration</string>
        <string/>
       </property>
       <property name="maxLength">
-       <number>8</number>
+       <number>100</number>
       </property>
      </widget>
      <widget class="QPushButton" name="new_submit_button">
@@ -467,6 +473,27 @@ Registration</string>
       </property>
       <property name="text">
        <string>Submit</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="success">
+     <widget class="QLabel" name="new_bg_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1000</width>
+        <height>560</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../resources/success.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
