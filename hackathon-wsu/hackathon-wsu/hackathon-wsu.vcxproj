@@ -130,11 +130,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="networking.cpp" />
     <ClCompile Include="person.cpp" />
+    <ClCompile Include="personnel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bundler.hpp" />
     <ClInclude Include="networking.hpp" />
     <ClInclude Include="person.hpp" />
+    <ClInclude Include="personnel.hpp" />
+    <ClInclude Include="x64\personnel.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
