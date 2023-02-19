@@ -16,7 +16,7 @@ public:
 
 	Person* findStudentID(int studentId);
 
-	void loadList(std::ifstream* file);
+    void loadList(std::string filename);
 
 	void writeList(std::ifstream* writeFile);
 

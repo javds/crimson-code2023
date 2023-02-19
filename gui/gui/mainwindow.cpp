@@ -11,9 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    std::ifstream readFile("data.csv");
-    std::fstream writeFile("data.csv");
-    my_list.loadList(&readFile);
+    //std::fstream writeFile("data.csv");
+    my_list.loadList("../resources/data.csv");
     ui->setupUi(this);
 }
 
@@ -25,7 +24,6 @@ MainWindow::~MainWindow()
 void MainWindow::reset_ui()
 {
     ui->stackedWidget->setCurrentIndex(0);
-    std::cout << ui->stackedWidget->count() << std::endl;
     ui->alr_wsu_id_form->clear();
     ui->birthdate_form->clear();
     ui->name_form->clear();
@@ -47,6 +45,10 @@ void MainWindow::on_alr_submit_button_clicked()
     if (ui->alr_wsu_id_form->text().length() < 8 || ui->alr_wsu_id_form->text().toStdString().find_first_not_of("0123456789") != std::string::npos) {
         ui->alr_wsu_id_form->setStyleSheet("QLineEdit { background: rgb(157, 34, 53); }");
         ui->alr_wsu_id_form->setPlaceholderText("ID must be 8 digits long.");
+        ui->alr_wsu_id_form->clear();
+    } else if (my_list.findStudentID(ui->alr_wsu_id_form->text().toInt()) == NULL) {
+        ui->alr_wsu_id_form->setStyleSheet("QLineEdit { background: rgb(157, 34, 53); }");
+        ui->alr_wsu_id_form->setPlaceholderText("ID does not exist in database.");
         ui->alr_wsu_id_form->clear();
     } else {
         std::cout << ui->alr_wsu_id_form->text().toStdString() << std::endl;
@@ -77,7 +79,19 @@ void MainWindow::on_new_submit_button_clicked()
         fail = 1;
     }
     if (!fail) {
-        std::cout << ui->new_wsu_id_form->text().toStdString() << std::endl;
+        if (my_list.findStudentID(ui->new_wsu_id_form->text().toInt()) != NULL) {
+            ui->stackedWidget->setCurrentIndex(3);
+            QTimer::singleShot(3000, this, SLOT(reset_ui()));
+            return;
+        }
+        Person* newPerson = new Person;
+        newPerson->setName(ui->name_form->text().toStdString());
+        newPerson->setDayBirth(stoi(ui->birthdate_form->text().toStdString().substr(0,2)));
+        newPerson->setMonthBirth(stoi(ui->birthdate_form->text().toStdString().substr(3,2)));
+        newPerson->setYearBirth(stoi(ui->birthdate_form->text().toStdString().substr(6,4)));
+        newPerson->setWsuid(ui->new_wsu_id_form->text().toInt());
+        newPerson->checkOut();
+        my_list.pushPerson(newPerson);
         ui->stackedWidget->setCurrentIndex(3);
         QTimer::singleShot(3000, this, SLOT(reset_ui()));
     }

@@ -32,12 +32,13 @@ Person* personnelList::findStudentID(int studentID)
 	return NULL;
 }
 
-void personnelList::loadList(std::ifstream* file)
+void personnelList::loadList(std::string filename)
 {
-
-	if (!file->is_open()) 
+    std::ifstream file(filename);
+    if (!file.is_open())
 	{
 		std::cout << "file failed to open\n";
+        return;
 	}
 
 	//data format is as follows name, day, month, year, id
@@ -46,11 +47,11 @@ void personnelList::loadList(std::ifstream* file)
 	std::string month;
 	std::string year;
 	std::string id;
-	while (!file->eof())
+    while (!file.eof())
 	{
 		std::string wholeLine;
 		
-		std::getline(*file, wholeLine); 
+        std::getline(file, wholeLine);
 		Person* newPerson = new Person;
 
 		std::stringstream strn(wholeLine);
