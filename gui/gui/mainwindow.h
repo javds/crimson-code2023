@@ -5,6 +5,10 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QTimer>
+#include "../../hackathon-wsu/hackathon-wsu/bundler.hpp"
+#include "../../hackathon-wsu/hackathon-wsu/networking.hpp"
+#include "../../hackathon-wsu/hackathon-wsu/person.hpp"
+#include "../../hackathon-wsu/hackathon-wsu/personnel.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
