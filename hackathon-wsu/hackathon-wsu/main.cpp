@@ -5,10 +5,15 @@
 
 int main(void) 
 {
-	std::ifstream file("data.csv");
+	std::ifstream readFile("data.csv");
+	std::fstream writeFile("data.csv");
+	
+	personnelList list;
+	list.loadList(&readFile);
 	
 	
-	
-	file.close();
+	list.writeList();
+	readFile.close();
+	writeFile.close();
 	return 0;
 }

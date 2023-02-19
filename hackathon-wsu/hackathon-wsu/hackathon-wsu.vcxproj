@@ -139,6 +139,9 @@
     <ClInclude Include="personnel.hpp" />
     <ClInclude Include="x64\personnel.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

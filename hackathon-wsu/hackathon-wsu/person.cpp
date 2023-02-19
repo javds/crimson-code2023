@@ -33,7 +33,7 @@ int Person::getDayBirth()
 	return dayOfBirth;
 }
 
-int Person::getMonthYear()
+int Person::getMonth()
 {
 	return monthOfBirth;
 }
@@ -46,6 +46,11 @@ int Person::getYearBirth()
 int Person::getWsuId()
 {
 	return wsuId;
+}
+
+bool Person::getCheckInStatus()
+{
+	return checkedIn;
 }
 
 void Person::setName(std::string setName)
@@ -71,4 +76,14 @@ void Person::setYearBirth(int setYear)
 void Person::setWsuid(int setWsuid)
 {
 	wsuId = setWsuid;
+}
+
+void Person::checkin()
+{
+	checkedIn = true;
+}
+
+void Person::checkOut()
+{
+	checkedIn = false;
 }

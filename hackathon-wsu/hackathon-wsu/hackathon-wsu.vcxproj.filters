@@ -24,6 +24,9 @@
     <ClCompile Include="networking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="personnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bundler.hpp">
@@ -35,5 +38,14 @@
     <ClInclude Include="networking.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="personnel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\personnel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data.csv" />
   </ItemGroup>
 </Project>

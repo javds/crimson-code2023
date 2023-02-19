@@ -22,6 +22,8 @@
 #include <algorithm>
 #include <string>
 #include <stdio.h>
+#include <sstream>
+#include <fstream>
 #pragma comment(lib, "Ws2_32.lib")
 
 

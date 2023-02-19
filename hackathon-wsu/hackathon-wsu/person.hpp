@@ -16,11 +16,13 @@ public:
 
 	int getDayBirth();
 
-	int getMonthYear();
+	int getMonth();
 
 	int getYearBirth();
 
 	int getWsuId();
+
+	bool getCheckInStatus();
 
 	void setName(std::string setName);
 
@@ -32,7 +34,9 @@ public:
 
 	void setWsuid(int setWsuid);
 
+	void checkin();
 
+	void checkOut();
 
 
 private:
@@ -43,6 +47,7 @@ private:
 	int monthOfBirth;
 	int yearOfBirth;
 	int wsuId;
+	bool checkedIn;
 
 };
 

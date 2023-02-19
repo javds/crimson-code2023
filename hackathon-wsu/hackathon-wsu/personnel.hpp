@@ -16,6 +16,8 @@ public:
 
 	void loadList(std::ifstream* file);
 
+	void writeList(std::ifstream* writeFile);
+
 private:
 
 	std::list<Person*> list;

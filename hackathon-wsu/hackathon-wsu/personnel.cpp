@@ -47,23 +47,65 @@ void personnelList::loadList(std::ifstream* file)
 	{
 		std::string wholeLine;
 		
-		std::getline(wholeLine, );
+		std::getline(*file, wholeLine); 
 		Person* newPerson = new Person;
 
-		std::string  newName;
-		int newday;
-		int newMonth;
-		int newYear;
-		int newId;
+		std::stringstream strn(wholeLine);
+		
+		std::getline(strn, name, ',');
+		std::getline(strn, day, ',');
+		std::getline(strn, month, ',');
+		std::getline(strn, year, ',');
+		std::getline(strn, id, '\n');
 
+		newPerson->setName(name);
+		newPerson->setDayBirth(stoi(day));
+		newPerson->setMonthBirth(stoi(month));
+		newPerson->setYearBirth(stoi(year));
+		newPerson->setWsuid(stoi(id));
+		newPerson->checkOut();
 
+		list.push_back(newPerson);
+	}
+	return;
+}
 
+void personnelList::writeList(std::ifstream* writeFile)
+{
+	if (!writeFile->is_open())
+	{
+		std::cout << "writefile failed for some reason\n";
+	}
+
+	for (auto iter = list.begin(); iter != list.end(); ++iter)
+	{
+		std::string name = (*iter)->getName();
+		int day = (*iter)->getDayBirth();
+		int month = (*iter)->getMonth();
+		int year = (*iter)->getYearBirth();
+		int id = (*iter)->getWsuId();
+		int checkedIn = (*iter)->getCheckInStatus();
+
+		char comma = ',';
+		
+
+		*writeFile >> name;
+		*writeFile >> comma;
+		*writeFile >> day;
+		*writeFile >> comma;
+		*writeFile >> month;
+		*writeFile >> comma;
+		*writeFile >> year;
+		*writeFile >> comma;
+		*writeFile >> id;
+		*writeFile >> comma;
+		*writeFile >> checkedIn;
 
 	}
 
+	*writeFile >> 
 
 
-	return;
 }
 
 
