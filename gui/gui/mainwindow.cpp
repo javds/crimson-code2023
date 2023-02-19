@@ -24,7 +24,12 @@ void MainWindow::on_registration_button_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-void MainWindow::on_lineEdit_returnPressed()
+void MainWindow::on_new_submit_button_clicked()
+{
+
+}
+
+void MainWindow::on_alr_submit_button_clicked()
 {
 
 }

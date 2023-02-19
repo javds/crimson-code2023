@@ -20,9 +20,11 @@ public:
 private slots:
     void on_already_button_clicked();
 
-    void on_lineEdit_returnPressed();
-
     void on_registration_button_clicked();
+
+    void on_new_submit_button_clicked();
+
+    void on_alr_submit_button_clicked();
 
 private:
     Ui::MainWindow *ui;
